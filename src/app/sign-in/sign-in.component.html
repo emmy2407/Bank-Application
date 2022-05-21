@@ -1,0 +1,20 @@
+
+<div class="container my-30 bg-dark">
+    <h2 style="text-align: center; color: #ff6600; font-weight: 550;">Sign In Page</h2>
+    <form>
+      <div *ngIf="see" class="alert alert-success" role="alert">Signed in successfully</div>
+      <div *ngIf="seee" class="alert alert-danger" role="alert">Incorrect details</div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Email" name="email" [(ngModel)]="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" [(ngModel)]="password">
+      </div>
+      <button type="submit" class="btn btn-info" style="background-color: #ff6600;" (click)="login()">Sign In</button>
+    </form>
+    <br>
+    <p style="color: #fff; text-align: center;">Don't have an account yet <a style="text-decoration: none; color: #ff6600;" routerLink="/signUp">Sign Up</a></p>
+
+  </div>

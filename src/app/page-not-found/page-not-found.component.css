@@ -1,0 +1,11 @@
+*{
+    margin: 30px;
+}
+
+.bg{
+    background-color: lightcoral;
+    color: red;
+    text-align: center;
+    font-size: 80px;
+    /* font-weight: 400; */
+}

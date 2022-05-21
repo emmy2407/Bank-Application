@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="container bg-light mt-3">
+        <h1>Fund Account Page</h1>
+        <p>Click on the button to fund your account</p>
+        
+        <button type="button" class="ttip" data-bs-toggle="modal" data-bs-target="#myModal">
+        Fund your account
+        </button>
+    </div>
+    
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+    
+            <!-- Modal Header -->
+            <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+    
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h3>Enter the amount to fund</h3>
+            <input type="number" placeholder="" [(ngModel)]="fund_acc" ><br><br>
+            <button class="ttip" data-bs-dismiss="modal" (click)="fund()">Fund Account</button>
+            </div>
+    
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            <button routerLinkActive="router-link-active"  type="button" class="ttip" data-bs-dismiss="modal">Close</button>
+            </div>
+    
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

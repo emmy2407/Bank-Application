@@ -1,0 +1,69 @@
+
+<!-- <div>
+    <div class="text-center">
+        <b id="user" class="text-dark">WELCOME {{currentUser.firstName | uppercase}},</b> 
+    </div>
+</div> -->
+
+<div class="container-fluid" style="background-color: #f2f2f2;">
+    <div class="row">
+        <div class="col-2 bg-dark text-light">
+            <!-- <div class="sub-list">Fund Account</div>
+            <div class="sub-list">Payment</div>
+            <div class="sub-list">Request</div>
+            <div class="sub-list">Wallet</div>
+            <div class="sub-list">Pay Bill</div>
+            <div class="sub-list">Loan</div>
+            <div class="sub-list">Transfer</div>
+            <div class="sub-list">Transaction History</div> -->
+        </div>
+        <div class="col-8">
+            <div class="row acc">
+                <div class="account box-shadow d-flex">
+                    Account Number: <br> {{currentUser.AccNum}}
+                </div>
+                <div class="account">
+                    Account Balance: <br> {{currentUser.AccBal|currency: 'NGN' : 'symbol-narrow'}}
+                </div>
+                <div class="account">
+                    Main Balance: <br> {{currentUser.AccBal|currency: 'NGN' : 'symbol-narrow'}}
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="row">
+                <div class="disprof box-shadow d-flex">
+                    <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+                        <div class="card p-4">
+                            <div class=" image d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn">
+                                    <img src="https://i.imgur.com/wvxPV9S.png" height="80" width="80" />
+                                </button>
+                                <span class="name mt-2 text-dark">
+                                    Welcome {{currentUser.lastName | titlecase}},
+                                </span> <span class="idd mb-2 text-dark">@{{currentUser.firstName | lowercase}}{{currentUser.lastName | lowercase}} </span>
+                                <div class="d-flex flex-row justify-content-center align-items-center gap-2">
+                                    <button type="button" class="ttip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                        {{currentUser.AccNum}} &nbsp; &nbsp;<span><i class="fa fa-clone"></i></span>
+                                      </button>
+                                </div>
+
+                                    
+                                <div class=" d-flex mt-2"> <button class="ttip">Edit Profile &nbsp; &nbsp; <i class="fa fa-pencil"></i></button> </div>
+                                <div class=" d-flex mt-2"> <button class="ttip">Log Out &nbsp; &nbsp; <i class="fa fa-arrow-right-from-bracket"></i></button> </div>
+
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="display">
+                    Account Balance: <br> {{currentUser.AccBal}}
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
